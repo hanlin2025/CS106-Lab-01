@@ -8,7 +8,9 @@
  */
 int tmax(void)
 {
-    return 2;
+    // return 2;
+    return ~(1<<31);
+    // return (1<<31) - 1; <- can we make overflow?
 }
 
 int test_tmax(void)

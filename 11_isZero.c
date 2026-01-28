@@ -9,7 +9,8 @@
  */
 int isZero(int x)
 {
-    return 2;
+    // return !x;
+    return !(x^0);
 }
 
 int test_isZero(int x)
@@ -19,7 +20,7 @@ int test_isZero(int x)
 
 int main(void)
 {
-    int x = 0;
+    int x = 123;
     printf("expected: %x\n", isZero(x));
     printf("actual  : %x\n", test_isZero(x));
 }

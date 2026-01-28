@@ -8,7 +8,8 @@
  */
 int thirdBits(void)
 {
-    return 2;
+    // return 2;
+    return (((0x49 << 9) | 0x49) << 18 | 0x49) << 9 | 0x49; // 这个自己排列一下
 }
 
 int test_thirdBits(void)

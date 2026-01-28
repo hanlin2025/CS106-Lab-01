@@ -9,7 +9,8 @@
  */
 int bitAnd(int x, int y)
 {
-    return 2;
+    // return 2;
+    return ~(~(x)|~(y));
 }
 
 int test_bitAnd(int x, int y)
@@ -19,8 +20,8 @@ int test_bitAnd(int x, int y)
 
 int main(void)
 {
-    int x = 0;
-    int y = 0;
+    int x = 6;
+    int y = 4;
     printf("expected: %x\n", test_bitAnd(x, y));
     printf("actual  : %x\n", bitAnd(x, y));
 }

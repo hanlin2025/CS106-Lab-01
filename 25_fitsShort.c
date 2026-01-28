@@ -10,7 +10,9 @@
  */
 int fitsShort(int x)
 {
-    return 2;
+    // return 2;
+    // return (x ^ 0xFFFF8000) & !(x ^ 0xFFFF8000) ;
+    return !((x >> 15) ^ (x >> 16)); // <- comparing the msb with left side bits
 }
 
 int test_fitsShort(int x)
@@ -21,7 +23,7 @@ int test_fitsShort(int x)
 
 int main(void)
 {
-    int x = 0;
+    int x = 32767;
     printf("expected: %x\n", fitsShort(x));
     printf("actual  : %x\n", test_fitsShort(x));
 }
